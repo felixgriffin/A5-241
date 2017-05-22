@@ -62,5 +62,6 @@ int runA4(void){
 	}
 	render(game);
 	printf("Yay! you win!\n\n");
+	getchar();
 	return 0;
 }

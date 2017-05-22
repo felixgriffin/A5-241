@@ -1,11 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "A4Main.h"
+#include "A2.h"
+#include "A1.h"
 
 
 void printGames(int size, char *games[size], int index){	
 	//clears terminal
-	system("cls"); // windows
+	//system("cls"); // windows
 	system("clear"); // unix
 
 	printf("\n");
@@ -39,14 +41,18 @@ int main(void){
 			if (move == 'Q' || move == 'w' || move == 's' || '\n')
 				break;
 		}
-		if (move == 'w')
+		if (move == 'w' && index > 0)
 			index -= 1;
-		if (move == 's')
+		if (move == 's' && index < 2)
 			index += 1;
 		if (move == 'Q')
 			break;
 		if (move == '\n' && index == 0)
 			runA4();
+		if (move == '\n' && index == 1)
+			runA2();
+		if (move == '\n' && index == 2)
+			runA1();
 	}
 	printf("BYE BYE!\n\n");
 }

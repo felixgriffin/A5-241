@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "A2.h"
 
 /**
   Dtects whether the game is already solved.

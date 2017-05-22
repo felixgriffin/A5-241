@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include "A1.h"
 
 //Defining all the macros
 #define START 1
@@ -32,7 +33,7 @@ int get_guess(const int attempt){
   Tells user that number is the same as input
   Tells user that number is higher/lower otherwise
  ***/
-int is_game_won(const int guess, const int randomNumber){
+int is_game_won_A1(const int guess, const int randomNumber){
 	if (randomNumber > guess)
 		printf("Hmm... My number is bigger than yours.\n");
 	else if (randomNumber < guess)
@@ -62,7 +63,7 @@ int runA1(void){
 		int randomNumber = get_secret(START, END);
 		int i;
 		for (i = 1; i <= ATTEMPTS; i++){
-			i += is_game_won(get_guess(i), randomNumber);
+			i += is_game_won_A1(get_guess(i), randomNumber);
 			if (i == 5)printf("\nGame over. My number was %d\n",randomNumber);
 			printf("\n");
 		}
