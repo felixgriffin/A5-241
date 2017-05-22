@@ -40,6 +40,8 @@ void render_lines(){
 }
 
 void render(const struct game game){
+	system("cls");
+	system("clear");
 	printf("\n");
 	for (int index_y = 0; index_y < HEIGHT; index_y++){
 		render_lines();

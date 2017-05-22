@@ -9,3 +9,6 @@ A4Main.o: A4Main.c
 
 A4.o: A4.c
 	gcc -Wall -Werror -std=c11 -c A4.c -lm
+
+clean:
+	@rm -f $(PROGRAMS) *.o core
